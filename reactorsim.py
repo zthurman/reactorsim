@@ -47,9 +47,12 @@ simulator_spec = {
 }
 
 
+caput_path = "/home/epics/epics-base/bin/linux-x86_64/caput"
+
+
 def simulate():
     for each_device, each_pv in simulator_spec.items():
-        with Popen(["caput", each_pv.name, f"{each_pv.value}"], stdout=PIPE) as proc:
+        with Popen([caput_path, each_pv.name, f"{each_pv.value}"], stdout=PIPE) as proc:
             proc.wait()
 
 
