@@ -1,0 +1,4 @@
+[Unit]
+Description=Reactor Simulator
+[Service]
+ExecStart=/usr/bin/python /usr/local/lib/reactorsim/reactorsim.py

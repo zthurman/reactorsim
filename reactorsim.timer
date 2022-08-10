@@ -1,0 +1,8 @@
+[Unit]
+Description=Reactor Simulate every 5 seconds
+[Timer]
+OnBootSec=10
+OnUnitActiveSec=5
+AccuracySec=1ms
+[Install]
+WantedBy=timers.target
