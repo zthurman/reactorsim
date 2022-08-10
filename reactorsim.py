@@ -49,7 +49,8 @@ simulator_spec = {
 
 def simulate():
     for each_device, each_pv in simulator_spec.items():
-        Popen(["caput", each_pv.name, f"{each_pv.value}"], stdout=PIPE)
+        with Popen(["caput", each_pv.name, f"{each_pv.value}"], stdout=PIPE) as proc:
+            proc.wait()
 
 
 simulate()
