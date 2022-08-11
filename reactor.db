@@ -1,0 +1,261 @@
+record(ai, "pressurizer:level")
+{
+    field(DESC, "Pressurizer Level")
+    field(LINR, LINEAR)
+    field(EGUF, 100)
+    field(EGUL, 0)
+    field(EGU, "%")
+    field(HIGH, 90)
+    field(HSV, MINOR)
+}
+record(calc, "pressurizer:level:trip")
+{
+    field(DESC, "Pressurizer Level Trip")
+    field(CALC, "(A>0)?B:C")
+    field(SCAN, "1 second")
+    field(INPA, "pressurizer:level.STAT")
+    field(INPB, 0)
+    field(INPC, 1)
+}
+record(ai, "pressurizer:pressurizer")
+{
+    field(DESC, "Pressurizer Pressure")
+    field(LINR, LINEAR)
+    field(EGUF, 2500)
+    field(EGUL, 1700)
+    field(EGU, PSIG)
+    field(HIGH, 2375)
+    field(HSV, MINOR)
+    field(LOW, 1925)
+    field(LSV, MAJOR)
+}
+record(calc, "pressurizer:pressure:trip")
+{
+    field(DESC, "Pressurizer Pressure Trip")
+    field(CALC, "(A>0)?B:C")
+    field(SCAN, "1 second")
+    field(INPA, "pressurizer:pressure.STAT")
+    field(INPB, 0)
+    field(INPC, 1)
+}
+record(calc, "pressurizer:trip")
+{
+    field(DESC, "Pressurizer Trip Aggregate")
+    field(CALC, "A&B")
+    field(SCAN, "1 second")
+    field(INPA, "pressurizer:pressure:trip")
+    field(INPB, "pressurizer:level:trip")
+}
+record(ai, "reactorcoolant:flow1")
+{
+    field(DESC, "Reactor Coolant Loop 1 Flow")
+    field(LINR, LINEAR)
+    field(EGUF, 100)
+    field(EGUL, 0)
+    field(EGU, "%")
+    field(LOW, 20)
+    field(LSV, MAJOR)
+}
+record(calc, "reactorcoolant:flow1:trip")
+{
+    field(DESC, "Reactor Coolant Loop 1 Flow Trip)
+    field(CALC, "(A>0)?B:C")
+    field(SCAN, "1 second")
+    field(INPA, "reactorcoolant:flow1.STAT")
+    field(INPB, 0)
+    field(INPC, 1)
+}
+record(ai, "reactorcoolant:flow2")
+{
+    field(DESC, "Reactor Coolant Loop 2 Flow")
+    field(LINR, LINEAR)
+    field(EGUF, 100)
+    field(EGUL, 0)
+    field(EGU, "%")
+    field(LOW, 20)
+    field(LSV, MAJOR)
+}
+record(calc, "reactorcoolant:flow2:trip")
+{
+    field(DESC, "Reactor Coolant Loop 2 Flow Trip)
+    field(CALC, "(A>0)?B:C")
+    field(SCAN, "1 second")
+    field(INPA, "reactorcoolant:flow2.STAT")
+    field(INPB, 0)
+    field(INPC, 1)
+}
+record(ai, "reactorcoolant:flow3")
+{
+    field(DESC, "Reactor Coolant Loop 3 Flow")
+    field(LINR, LINEAR)
+    field(EGUF, 100)
+    field(EGUL, 0)
+    field(EGU, "%")
+    field(LOW, 20)
+    field(LSV, MAJOR)
+}
+record(calc, "reactorcoolant:flow3:trip")
+{
+    field(DESC, "Reactor Coolant Loop 3 Flow Trip)
+    field(CALC, "(A>0)?B:C")
+    field(SCAN, "1 second")
+    field(INPA, "reactorcoolant:flow3.STAT")
+    field(INPB, 0)
+    field(INPC, 1)
+}
+record(ai, "reactorcoolant:flow4")
+{
+    field(DESC, "Reactor Coolant Loop 4 Flow")
+    field(LINR, LINEAR)
+    field(EGUF, 100)
+    field(EGUL, 0)
+    field(EGU, "%")
+    field(LOW, 20)
+    field(LSV, MAJOR)
+}
+record(calc, "reactorcoolant:flow4:trip")
+{
+    field(DESC, "Reactor Coolant Loop 4 Flow Trip)
+    field(CALC, "(A>0)?B:C")
+    field(SCAN, "1 second")
+    field(INPA, "reactorcoolant:flow4.STAT")
+    field(INPB, 0)
+    field(INPC, 1)
+}
+record(calc, "reactorcoolant:trip")
+{
+    field(DESC, "Reactor Coolant Trip Aggregate)
+    field(CALC, "A&B&C&D")
+    field(SCAN, "1 second")
+    field(INPA, "reactorcoolant:flow1:trip")
+    field(INPB, "reactorcoolant:flow2:trip")
+    field(INPC, "reactorcoolant:flow3:trip")
+    field(INPD, "reactorcoolant:flow4:trip")
+}
+record(ai, "steamgenerator:level1")
+{
+    field(DESC, "Steam Generator 1 Level")
+    field(LINR, LINEAR)
+    field(EGUF, 100)
+    field(EGUL, 0)
+    field(EGU, "%")
+    field(LOW, 15)
+    field(LSV, MINOR)
+}
+record(calc, "steamgenerator:level1:trip")
+{
+    field(DESC, "Steam Generator 1 Level Trip)
+    field(CALC, "(A>0)?B:C")
+    field(SCAN, "1 second")
+    field(INPA, "steamgenerator:level1.STAT")
+    field(INPB, 0)
+    field(INPC, 1)
+}
+record(ai, "steamgenerator:level2")
+{
+    field(DESC, "Steam Generator 2 Level")
+    field(LINR, LINEAR)
+    field(EGUF, 100)
+    field(EGUL, 0)
+    field(EGU, "%")
+    field(LOW, 15)
+    field(LSV, MINOR)
+}
+record(calc, "steamgenerator:level2:trip")
+{
+    field(DESC, "Steam Generator 2 Level Trip)
+    field(CALC, "(A>0)?B:C")
+    field(SCAN, "1 second")
+    field(INPA, "steamgenerator:level2.STAT")
+    field(INPB, 0)
+    field(INPC, 1)
+}
+record(ai, "steamgenerator:level3")
+{
+    field(DESC, "Steam Generator 3 Level")
+    field(LINR, LINEAR)
+    field(EGUF, 100)
+    field(EGUL, 0)
+    field(EGU, "%")
+    field(LOW, 15)
+    field(LSV, MINOR)
+}
+record(calc, "steamgenerator:level3:trip")
+{
+    field(DESC, "Steam Generator 3 Level Trip)
+    field(CALC, "(A>0)?B:C")
+    field(SCAN, "1 second")
+    field(INPA, "steamgenerator:level3.STAT")
+    field(INPB, 0)
+    field(INPC, 1)
+}
+record(ai, "steamgenerator:level4")
+{
+    field(DESC, "Steam Generator 4 Level")
+    field(LINR, LINEAR)
+    field(EGUF, 100)
+    field(EGUL, 0)
+    field(EGU, "%")
+    field(LOW, 15)
+    field(LSV, MINOR)
+}
+record(calc, "steamgenerator:level4:trip")
+{
+    field(DESC, "Steam Generator 4 Level Trip)
+    field(CALC, "(A>0)?B:C")
+    field(SCAN, "1 second")
+    field(INPA, "steamgenerator:level4.STAT")
+    field(INPB, 0)
+    field(INPC, 1)
+}
+record(calc, "steamgenerator:trip")
+{
+    field(DESC, "Steam Generator Trip Aggregate)
+    field(CALC, "A&B&C&D")
+    field(SCAN, "1 second")
+    field(INPA, "steamgenerator:level1:trip")
+    field(INPB, "steamgenerator:level2:trip")
+    field(INPC, "steamgenerator:level3:trip")
+    field(INPD, "steamgenerator:level4:trip")
+}
+record(bi, "turbine:trip")
+{
+    field(DESC, "Turbine Trip")
+}
+record(calc, "reactor:trip")
+{
+    field(DESC, "Reactor Trip")
+    field(CALC, "A&B&C&D)
+    field(SCAN, "1 second")
+    field(INPA, "pressurizer:trip")
+    field(INPB, "reactorcoolant:trip")
+    field(INPC, "steamgenerator:trip")
+    field(INPD, "turbine:trip")
+}
+record(ai, "reactor:power")
+{
+    field(DESC, "Reactor Power")
+    field(EGUF, 100)
+    field(EGUL, 0)
+    field(EGU, "%")
+}
+record(calc, "reactor:power:actual")
+{
+    field(DESC, "Actual Reactor Power")
+    field(CALC, "(A<1)?B:C")
+    field(SCAN, "1 second")
+    field(INPA, "reactor:trip")
+    field(INPB, 0)
+    field(INPC, "reactor:power")
+}
+
+
+
+
+
+
+
+
+
+
+

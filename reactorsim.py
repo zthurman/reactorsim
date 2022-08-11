@@ -16,34 +16,35 @@ class ProcessValue:
 
 
 simulator_spec = {
-    "przlvl": ProcessValue(name="pressurizer:level", signal_low=0.0, signal_high=5.0),
+    "przlvl": ProcessValue(name="pressurizer:level", signal_low=30.0, signal_high=50.0),
     "przprs": ProcessValue(
-        name="pressurizer:pressure", signal_low=0.01, signal_high=0.15
+        name="pressurizer:pressure", signal_low=1925, signal_high=2375
     ),
     "rc1flow": ProcessValue(
-        name="reactorcoolant:flow1", signal_low=0.01, signal_high=0.15
+        name="reactorcoolant:flow1", signal_low=21, signal_high=100
     ),
     "rc2flow": ProcessValue(
-        name="reactorcoolant:flow2", signal_low=0.01, signal_high=0.15
+        name="reactorcoolant:flow2", signal_low=21, signal_high=100
     ),
     "rc3flow": ProcessValue(
-        name="reactorcoolant:flow3", signal_low=0.01, signal_high=0.15
+        name="reactorcoolant:flow3", signal_low=21, signal_high=100
     ),
     "rc4flow": ProcessValue(
-        name="reactorcoolant:flow4", signal_low=0.01, signal_high=0.15
+        name="reactorcoolant:flow4", signal_low=21, signal_high=100
     ),
     "sg1lvl": ProcessValue(
-        name="steamgenerator:level1", signal_low=2.5, signal_high=10.0
+        name="steamgenerator:level1", signal_low=16, signal_high=100.0
     ),
     "sg2lvl": ProcessValue(
-        name="steamgenerator:level2", signal_low=2.5, signal_high=10.0
+        name="steamgenerator:level2", signal_low=16, signal_high=100.0
     ),
     "sg3lvl": ProcessValue(
-        name="steamgenerator:level3", signal_low=2.5, signal_high=10.0
+        name="steamgenerator:level3", signal_low=16, signal_high=100.0
     ),
     "sg4lvl": ProcessValue(
-        name="steamgenerator:level4", signal_low=2.5, signal_high=10.0
+        name="steamgenerator:level4", signal_low=16, signal_high=100.0
     ),
+    "rctrpwr": ProcessValue(name="reactor:power", signal_low=90.0, signal_high=100.0),
 }
 
 

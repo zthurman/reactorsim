@@ -14,11 +14,4 @@ on the NRCs site [here](https://www.nrc.gov/docs/ML1122/).
 I should probably make another repo with all of the documents
 on github for posterity when they notice those files are 
 outward facing.
-
-Pressurizer pressure low and high trip: 1925 psig low sp, 2375 psig high sp; 1700-2500 psig
-Pressurizer level high trip: 0-100%, 90% high sp
-Reactor Coolant Loop Low Flow trip: 0-100%, 20% low flow setpoint
-Steam generator level low low trip: 0-100%, 15% low low sp
-turbine trip
-All go into reactor trip, active low
 '''
