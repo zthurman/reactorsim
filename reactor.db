@@ -139,8 +139,8 @@ record(ai, "steamgenerator:level1")
     field(EGUF, 100)
     field(EGUL, 0)
     field(EGU, "%")
-    field(LOW, 15)
-    field(LSV, MINOR)
+    field(LOLO, 15)
+    field(LLSV, MINOR)
 }
 record(calc, "steamgenerator:level1:trip")
 {
@@ -158,8 +158,8 @@ record(ai, "steamgenerator:level2")
     field(EGUF, 100)
     field(EGUL, 0)
     field(EGU, "%")
-    field(LOW, 15)
-    field(LSV, MINOR)
+    field(LOLO, 15)
+    field(LLSV, MINOR)
 }
 record(calc, "steamgenerator:level2:trip")
 {
@@ -177,8 +177,8 @@ record(ai, "steamgenerator:level3")
     field(EGUF, 100)
     field(EGUL, 0)
     field(EGU, "%")
-    field(LOW, 15)
-    field(LSV, MINOR)
+    field(LOLO, 15)
+    field(LLSV, MINOR)
 }
 record(calc, "steamgenerator:level3:trip")
 {
@@ -196,8 +196,8 @@ record(ai, "steamgenerator:level4")
     field(EGUF, 100)
     field(EGUL, 0)
     field(EGU, "%")
-    field(LOW, 15)
-    field(LSV, MINOR)
+    field(LOLO, 15)
+    field(LLSV, MINOR)
 }
 record(calc, "steamgenerator:level4:trip")
 {
