@@ -17,7 +17,7 @@ record(calc, "pressurizer:level:trip")
     field(INPB, 0)
     field(INPC, 1)
 }
-record(ai, "pressurizer:pressurizer")
+record(ai, "pressurizer:pressure")
 {
     field(DESC, "Pressurizer Pressure")
     field(LINR, LINEAR)
