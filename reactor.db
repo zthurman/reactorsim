@@ -225,7 +225,7 @@ record(bi, "turbine:trip")
 record(calc, "reactor:trip")
 {
     field(DESC, "Reactor Trip")
-    field(CALC, "A&B&C&D)
+    field(CALC, "A&B&C&D")
     field(SCAN, "1 second")
     field(INPA, "pressurizer:trip")
     field(INPB, "reactorcoolant:trip")
