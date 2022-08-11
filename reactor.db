@@ -58,7 +58,7 @@ record(ai, "reactorcoolant:flow1")
 }
 record(calc, "reactorcoolant:flow1:trip")
 {
-    field(DESC, "Reactor Coolant Loop 1 Flow Trip)
+    field(DESC, "Reactor Coolant Loop 1 Flow Trip")
     field(CALC, "(A>0)?B:C")
     field(SCAN, "1 second")
     field(INPA, "reactorcoolant:flow1.STAT")
@@ -77,7 +77,7 @@ record(ai, "reactorcoolant:flow2")
 }
 record(calc, "reactorcoolant:flow2:trip")
 {
-    field(DESC, "Reactor Coolant Loop 2 Flow Trip)
+    field(DESC, "Reactor Coolant Loop 2 Flow Trip")
     field(CALC, "(A>0)?B:C")
     field(SCAN, "1 second")
     field(INPA, "reactorcoolant:flow2.STAT")
@@ -96,7 +96,7 @@ record(ai, "reactorcoolant:flow3")
 }
 record(calc, "reactorcoolant:flow3:trip")
 {
-    field(DESC, "Reactor Coolant Loop 3 Flow Trip)
+    field(DESC, "Reactor Coolant Loop 3 Flow Trip")
     field(CALC, "(A>0)?B:C")
     field(SCAN, "1 second")
     field(INPA, "reactorcoolant:flow3.STAT")
@@ -115,7 +115,7 @@ record(ai, "reactorcoolant:flow4")
 }
 record(calc, "reactorcoolant:flow4:trip")
 {
-    field(DESC, "Reactor Coolant Loop 4 Flow Trip)
+    field(DESC, "Reactor Coolant Loop 4 Flow Trip")
     field(CALC, "(A>0)?B:C")
     field(SCAN, "1 second")
     field(INPA, "reactorcoolant:flow4.STAT")
@@ -124,7 +124,7 @@ record(calc, "reactorcoolant:flow4:trip")
 }
 record(calc, "reactorcoolant:trip")
 {
-    field(DESC, "Reactor Coolant Trip Aggregate)
+    field(DESC, "Reactor Coolant Trip Aggregate")
     field(CALC, "A&B&C&D")
     field(SCAN, "1 second")
     field(INPA, "reactorcoolant:flow1:trip")
@@ -144,7 +144,7 @@ record(ai, "steamgenerator:level1")
 }
 record(calc, "steamgenerator:level1:trip")
 {
-    field(DESC, "Steam Generator 1 Level Trip)
+    field(DESC, "Steam Generator 1 Level Trip")
     field(CALC, "(A>0)?B:C")
     field(SCAN, "1 second")
     field(INPA, "steamgenerator:level1.STAT")
@@ -163,7 +163,7 @@ record(ai, "steamgenerator:level2")
 }
 record(calc, "steamgenerator:level2:trip")
 {
-    field(DESC, "Steam Generator 2 Level Trip)
+    field(DESC, "Steam Generator 2 Level Trip")
     field(CALC, "(A>0)?B:C")
     field(SCAN, "1 second")
     field(INPA, "steamgenerator:level2.STAT")
@@ -182,7 +182,7 @@ record(ai, "steamgenerator:level3")
 }
 record(calc, "steamgenerator:level3:trip")
 {
-    field(DESC, "Steam Generator 3 Level Trip)
+    field(DESC, "Steam Generator 3 Level Trip")
     field(CALC, "(A>0)?B:C")
     field(SCAN, "1 second")
     field(INPA, "steamgenerator:level3.STAT")
@@ -201,7 +201,7 @@ record(ai, "steamgenerator:level4")
 }
 record(calc, "steamgenerator:level4:trip")
 {
-    field(DESC, "Steam Generator 4 Level Trip)
+    field(DESC, "Steam Generator 4 Level Trip")
     field(CALC, "(A>0)?B:C")
     field(SCAN, "1 second")
     field(INPA, "steamgenerator:level4.STAT")
@@ -210,7 +210,7 @@ record(calc, "steamgenerator:level4:trip")
 }
 record(calc, "steamgenerator:trip")
 {
-    field(DESC, "Steam Generator Trip Aggregate)
+    field(DESC, "Steam Generator Trip Aggregate")
     field(CALC, "A&B&C&D")
     field(SCAN, "1 second")
     field(INPA, "steamgenerator:level1:trip")
